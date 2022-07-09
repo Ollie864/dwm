@@ -128,6 +128,7 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_m,      spawn,          {.v = matrix } },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("slock") },
 
+
 	//MPD Commands
 
 	{ MODKEY|ControlMask|Mod1Mask,  XK_p,      spawn,          SHCMD("mpc toggle") },
