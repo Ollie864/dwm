@@ -69,8 +69,10 @@ static const char *matrix[]  = { "/usr/bin/element-desktop", NULL };
 static const char *ncmpcpp[] = {"alacritty", "-e", "/usr/bin/ncmpcpp", NULL };
 static const char *ranger[] = {"alacritty", "-e", "/usr/bin/ranger", NULL };
 static const char *newsboat[] = {"alacritty", "-e", "/usr/bin/newsboat", NULL };
+static const char *neomutt[] = {"alacritty", "-e", "/usr/bin/neomutt", NULL };
 static const char *keepassxc[]  = { "/usr/bin/keepassxc", NULL };
 static const char *chromium[]  = { "/usr/bin/chromium", NULL };
+static const char *steam[]  = { "/usr/bin/steam", NULL };
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -118,7 +120,9 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_f,      spawn,          {.v = firefox } },
 	{ MODKEY|Mod1Mask,              XK_e,      spawn,          SHCMD("emacsclient -c -a 'emacs'") },
 	{ MODKEY|Mod1Mask,              XK_d,      spawn,          {.v = filemanager } },
+	{ MODKEY|Mod1Mask,              XK_s,      spawn,          {.v = steam } },
 	{ MODKEY|Mod1Mask,              XK_n,      spawn,          {.v = ncmpcpp } },
+	{ MODKEY|Mod1Mask,              XK_l,      spawn,          {.v = neomutt } },
 	{ MODKEY|ShiftMask,		XK_p,      spawn,	   {.v = (const char*[]){ "/home/ollie/.scripts/poweroffscript.sh", NULL } } },
 	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = (const char*[]){ "/home/ollie/.scripts/logout.sh", NULL } } },
 	{ MODKEY|Mod1Mask,              XK_r,      spawn,          {.v = ranger } },
